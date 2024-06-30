@@ -1,0 +1,32 @@
+- title: "FlashFFTConv: Efficient Convolutions for Long Sequences"
+  desc: A library for fast exact convolutions optimized for GPU. Now being used in production by Together AI to train and serve long-sequence convolutional language models. Deployed in Monarch Mixer, Striped Hyena, long-context DNA models, DiffuSSM diffusion models, and more.
+  link: https://github.com/HazyResearch/flash-fft-conv
+
+- title: "Monarch Mixer BERT Models"
+  desc: "A suite of BERT models trained with Monarch Mixer, from 80M to 341M parameters, supporting sequence lengths up to 32K. Now being served by Together AI with integrations into MongoDB Atlas, LangChain, and LlamaIndex."
+  link: https://github.com/HazyResearch/m2
+
+- title: "RedPajama-1T"
+  desc: "A trillion+ token dataset for training large language models, mimicking the data gathering process from Llama-1. So far downloaded 1 million+ times."
+  link: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T
+
+- title: "Safari: Convolutions for Sequence Modeling"
+  desc: "A training repository for gated convolution models on language, images, and long-sequence data. Used to train H3, Hyena, and M2."
+  link: https://github.com/HazyResearch/safari
+
+- title: "Hungry Hungry Hippos (H3) Models"
+  desc: "A suite of hybrid attention + gated SSM architectures trained on language modeling, up to 2.7B parameters."
+  link: https://github.com/HazyResearch/H3
+
+- title: "FlashAttention"
+  desc: "Fast and memory-efficient exact attention with IO-Awareness. Now integrated into PyTorch and used in every major AI research lab in industry."
+  link: https://github.com/HazyResearch/flash-attention
+
+- title: "FlyingSquid"
+  desc: "A fast algorithm for weak supervision without SGD using method-of-moments estimation. In use at Snorkel AI."
+  link: https://github.com/HazyResearch/flyingsquid
+
+- title: "Rekall: Compositional Video Event Specification"
+  desc: "A library for analyzing video data using compositions of image labels. Once used at Argo AI for event mining."
+  link: https://github.com/scanner-research/rekall
+

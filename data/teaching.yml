@@ -1,0 +1,22 @@
+- title: "Stanford CS 324: Advances in Foundation Models - Winter 2023"
+  desc: Speaker Interviewer / Podcast Host
+
+- title: "Stanford CS 528: Machine Learning Systems Seminar - Fall 2021, Winter 2022, Spring 2022, Fall 2023"
+  desc: Instructor/Founder
+  links:
+    - text: course website
+      link: https://mlsys.stanford.edu/cs528/
+- title: "Harvard CS 152: Programming Languages - Spring 2018"
+  desc: Teaching Fellow
+  links:
+    - text: course website
+      link: https://www.seas.harvard.edu/courses/cs152/2018sp/
+- title: "Harvard CS 61: Systems Programming and Machine Organization - Fall 2015, 2016, 2017"
+  desc: Teaching Fellow
+  links:
+    - text: 2015
+      link: https://cs61.seas.harvard.edu/wiki/2015/Home
+    - text: 2016
+      link: https://cs61.seas.harvard.edu/wiki/2016/Home
+    - text: 2017
+      link: https://cs61.seas.harvard.edu/wiki/2017/Home

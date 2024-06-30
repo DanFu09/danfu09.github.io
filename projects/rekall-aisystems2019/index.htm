@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+
+	var spec = {
+			'Video Clips': [
+        {
+          fi: "https://youtu.be/O8gL6qBJ5Rc",
+          embedlink: "https://www.youtube.com/embed/O8gL6qBJ5Rc",
+          description: 'A trailer we edited together for Star Wars: Episode III ' +
+          '- Revenge of the Sith. We used Rekall queries to mine for film idioms ' +
+          'like action sequences, establishing shots, and hero shots according ' +
+          'to a trailer template, and edited the resulting clips together into ' +
+          'a trailer.',
+          dataset: 'Film',
+          name: 'Star Wars: Episode III - Revenge of the Sith Film Trailer',
+          thumb: 'thumb/sithtrailer.png'
+        },
+				{
+          fi: 'https://youtu.be/5MTA6njAFWs',
+          embedlink: 'https://www.youtube.com/embed/5MTA6njAFWs',
+          description: 'This is a video montage showing results from our TV News ' +
+          'interview detector. We randomly sampled 64 clips from our interview ' +
+          'detection query with 2016 presidential candidates.',
+          thumb: 'thumb/interviews.png',
+          name: 'Video Montage: Interviews',
+          dataset: 'TV News',
+        },
+				{
+          fi: 'https://youtu.be/ivFtDDG_Y4k',
+          embedlink: 'https://www.youtube.com/embed/ivFtDDG_Y4k',
+          description: 'A supercut of reaction shots in the film Apollo 13 finds ' +
+          'cinematic shots where the person identity for the face onscreen is ' +
+          'different from the name of the person delivering the line in the script. ' +
+          'Such reaction sequences show astronauts receiving orders from ground ' +
+          'control, or characters reacting to television broadcast, for example. ' +
+          'These shots can emphasize the emotional impact of certain lines by ' +
+          "showing a main character's reaction.", 
+          thumb: 'thumb/apollo.png', 
+          name: 'Supercut: Apollo 13 Reaction Shots', 
+          dataset: 'Film', 
+          code: 'img/reactions.png'
+        },
+				{
+          fi: 'https://youtu.be/qBn52AnTDmk',
+          embedlink: 'https://www.youtube.com/embed/qBn52AnTDmk',
+          description: 'We generated a supercut of action sequences where our ' +
+          'pattern finds sequences of five or more short (less than 0.8s) cinematic ' +
+          'shots. The resulting clips show a variety of quick cuts from car chases ' +
+          'to fight scenes and monster attacks.',
+          thumb: 'thumb/action.png',
+          name: 'Supercut: Action Sequences',
+          dataset: 'Film'
+        },
+				{
+          fi: 'https://youtu.be/59y96L4uA4A',
+          embedlink: 'https://www.youtube.com/embed/59y96L4uA4A',
+          description: 'A supercut of all the times the popular phrase, "May ' +
+          'the force be with you," is said across all Starwars movies.',
+          thumb: 'thumb/force.png',
+          name: 'Supercut: "May The Force Be With You"',
+          dataset: 'Film', ref: ''
+        },
+				{
+          fi: 'https://youtu.be/q_Qx9a_yB8s',
+          embedlink: 'https://www.youtube.com/embed/q_Qx9a_yB8s',
+          description: 'A supercut for the spatial pattern of Hermione between ' +
+          'Harry and Ron shows that this is a recurring visual template across ' +
+          'the Harry Potter series of films and appears with different background, ' +
+          'lighting and emotional points in the films. Composing this pattern with ' +
+          'shot scales shows that the trio were increasingly shown with longer shot ' +
+          'scales in the later films, until the final resolution at the end of the ' +
+          'final film in the series.',
+          thumb: 'thumb/harrypotter.png',
+          name: 'Supercut: Hermione between Harry and Ron',
+          dataset: 'Film',
+          ref: 'Main paper, section 4.2',
+          code: 'img/harrypotter.png'
+        },
+			  //{fi: 'videos/newyear.mp4', description: 'This is a video montage showing results when people saying "Happy New Year" in TV News videos. We further filtered this composition by gender, showing all male on the left half of the screen and female on the right half.', thumb: 'thumb/newyear.png', name: 'Happy New Year', dataset: 'TV News', ref: ''}, 
+				//{fi: 'videos/thankyou.mp4', ref: '', thumb: 'thumb/thankyou.png', name: 'Thank You Very Much', dataset: 'TV News', description: 'This is a video montage showing results when people saying "Thank you very much" in TV News videos. We further filtered this composition by gender, showing all male on the left half of the screen and female on the right half.'},
+				//{fi: 'videos/BO-prison.mp4', description: 'Barack Obama singing Folsom Prison Blues by Johnny Cash.', thumb: 'thumb/BO-Prison.png', name: 'Folsom Prison Blues', dataset: 'TV News', ref:''},
+				//{fi: 'videos/hbd-dt.mp4', description: 'Donald Trump singing Happy Birthday.', thumb: 'thumb/hbd-dt.png', name: 'Happy Birthday - DT', dataset: 'TV News', ref: ''},
+				//{fi: 'videos/hbd-bo.mp4', description: 'Barack Obama singing Happy Birthday.', thumb: 'thumb/hbd-bo.png', name: 'Happy Birthday - BO', dataset: 'TV News', ref: ''},
+			  {
+          fi: 'https://youtu.be/mT72GndHjZ8',
+          embedlink: 'https://www.youtube.com/embed/mT72GndHjZ8',
+          description: 'Here, we were able to automatically identify an instance ' +
+          'of the intensification film idiom in Alfred Hitchcock\'s Spellbound. ' +
+          'As the conversation progresses, the shot scale moves closer in on the ' +
+          'female character to emphasize her emotion.',
+          thumb: 'thumb/spellbound.png',
+          name: 'Film Idiom: Intensification',
+          dataset: 'Film'
+        },
+				/** {
+          fi: 'videos/braveheart.mp4',
+          description: 'This intensification sequence in Braveheart shows the ' +
+          'shot scale moving closer in on the male speaker as his dialogue gets ' +
+          'more menacing.',
+          thumb: 'thumb/braveheart.png',
+          name: 'Film Idiom: Intensification',
+          dataset: 'Film',
+        }, */
+				{
+          fi: 'https://youtu.be/kQmB1PfDw-M',
+          embedlink: 'https://www.youtube.com/embed/kQmB1PfDw-M',
+          description: 'This clip is an example of the start wide film idiom; ' + 
+          'the first shot in this conversation sequence from the ' +
+          'movie Interstellar establishes the scene with a wide shot showing both ' +
+          'characters.',
+          thumb: 'thumb/interstellar.png',
+          name: 'Film Idiom: Start Wide',
+          dataset: 'Film'
+        },
+        /** 
+				{
+          fi: 'videos/starwars6.mp4',
+          description: 'This sequence starts with a wide shot of all of the ' +
+          'characters as well as their setting before cutting into closer shots ' +
+          'for the remainder of the dialogue.',
+          thumb: 'thumb/starwars6.png',
+          name: 'Film Idiom: Start Wide',
+          dataset: 'Film'
+        } */
+			]
+		};
+
+
+	var create_thumb = function(container_id, idx, video_info) {
+		var parent_elem = $('#' + container_id),
+			thumb_id = container_id + '_' + idx;
+
+		_html = '<div class="thumb-div" id="' + thumb_id + '" >\
+			<img src="' + video_info['thumb'] + '"/>\
+			<span class="caption"> ' + video_info['name'] + '</span></div>'
+		parent_elem.append(_html)
+
+		$('#' + thumb_id).click(function(e) {
+      document.getElementById('youtube-embedding').src = video_info['embedlink']
+      $('#now-playing').html(video_info['fi'])
+      $('#now-playing').attr('href', video_info['fi'])
+			$('#dset-label').html(video_info['dataset'])
+			$('#description').html(video_info.description)
+			$('#ref').html(video_info.ref)
+		})
+	}
+
+	$(document).ready(function() {
+
+		var _html = ""
+		for (var c in spec) {
+			c_key = c.split(' ').join('-')
+			_html += '<div class="thumb-par" id="' + c_key + '"></div>'
+		}
+
+		$('#thumbnail-cont').html(_html)
+
+		for (var c in spec) {
+			c_key = c.split(' ').join('-')
+			for (var i = 0; i < spec[c].length; i++) {
+				item = spec[c][i]
+				create_thumb(c_key, i, item)
+			}
+		}
+
+    video_info = spec['Video Clips'][0]
+    document.getElementById('youtube-embedding').src = video_info['embedlink']
+    $('#now-playing').html(video_info['fi'])
+    $('#now-playing').attr('href', video_info['fi'])
+    $('#dset-label').html(video_info['dataset'])
+    $('#description').html(video_info.description)
+    $('#ref').html(video_info.ref)
+
+	});
+
+
+</script>
+<style>
+
+.caption {
+	font-size: 12pt;
+}
+
+.thumb-div {
+	border-width: .5px;
+	border-color: #545454;
+	width: 24%;
+	display: inline-block;
+	vertical-align: top;
+	margin: 2px;
+	text-align: center;
+}
+
+.thumb-div img{
+	width: 100%;
+	border: 1px solid #b4b4b4;
+}
+
+
+.thumb-par{
+	border: 1px 0 solid;
+	height 200px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.thumb-par h1{
+  font-size: 14pt;
+}
+
+.title {
+	margin: 0 auto;
+  margin-top: 1rem;
+	text-align: center;
+	font-size: 26pt;
+}
+
+.authorlist {
+	font-weight: 200;
+  margin-top: 1rem;
+	font-size: 16pt;
+}
+
+.university {
+	font-weight: 200;
+  margin-top: 0.5rem;
+	font-size: 16pt;
+}
+
+.emails {
+	font-weight: 200;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+	font-size: 14pt;
+}
+
+.content {
+  width: 100%;
+	margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.abstract h1 {
+  margin-top: 2rem;
+  margin-bottom: 05.rem;
+	text-align: center;
+	font-size: 18pt;
+}
+
+.abstract p {
+  text-align: justify;
+}
+
+.links {
+  text-align: left;
+  font-size: 16pt;
+}
+
+a:link {
+  color: #4ca6ff;
+  text-decoration: none;
+  <!-- border-bottom: 1px dashed #4ca6ff; -->
+}
+
+a:visited {
+  color: #4ca6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+#video-cont h1 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+	text-align: center;
+	font-size: 18pt;
+}
+
+#video-cont .subheading {
+  margin-bottom: 0.5rem;
+  font-size: 14pt;
+}
+
+.vid-box {
+	width: 400px;
+	display: inline-block;
+	margin: 10px;
+	height: 500px;
+	vertical-align: top;
+}
+
+#vid-info {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0.5rem;
+	width: 100%; 
+  text-align: left;
+}
+
+#video-cont {
+	margin: 10px auto;
+	width: fit-content;
+}
+
+#container {
+	max-width: 1000px; 
+  text-align: center;
+  margin: 0 auto;
+}
+
+#thumbnail-cont{
+	padding: 2px;
+  margin-bottom: 1rem;
+}
+.cat-head {
+	margin-bottom: 10px;
+	font-weight: 500;
+	font-size: 15pt;
+}
+
+body {
+	color: #151515;
+	font-size: 12pt;
+	font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  padding: 13pt;
+}
+
+.text-label {
+	color: #b4b4b4;
+  font-weight: 500;
+}
+
+.hidden {
+	display: none;
+}
+
+.figure-caption {
+  text-align: justify;
+}
+
+.keyword {
+  font-weight: 500;
+}
+
+</style>
+</head>
+<body>
+
+<div id="container">
+  <div class="title">
+    <h1>Video Event Specification using Programmatic Composition</h1>
+    <div class="authorlist">
+      <a href="http://www.danfu.org/" target="_blank">Daniel Y. Fu</a>,
+      <a href="http://willcrichton.net/" target="_blank">Will Crichton</a>,
+      <a href="http://jhong.me/" target="_blank">James Hong</a>,
+      <a href="https://www.davidyao.me/" target="_blank">Xinwei Yao</a>,
+      <a href="https://cs.stanford.edu/~haotianz/" target="_blank">Haotian Zhang</a>,
+      <a href="https://anhtruong.org/" target="_blank">Anh Truong</a>,
+      <a href="https://profiles.stanford.edu/172398" target="_blank">Avanika Narayan</a>,
+      <a href="http://graphics.stanford.edu/~maneesh/" target="_blank">Maneesh Agrawala</a>,
+      <a href="https://cs.stanford.edu/people/chrismre/" target="_blank">Christopher R&eacute;</a>,
+      <a href="http://graphics.stanford.edu/~kayvonf/" target="_blank">Kayvon Fatahalian</a>
+    </div>
+    <div class="university">
+      Stanford University
+    </div>
+    <!-- <div class="emails">
+      {danfu, wcrichto, james.hong, xinwei.yao, haotianz, anhlt92, avanika,
+      maneesh, chrismre, kayvonf}@cs.stanford.edu
+    </div> -->
+  </div>
+  <div class="content">
+    <img src="img/overview.png" width="100%">
+    <div class="figure-caption">
+      <span class="keyword">Figure 1: </span>
+      Overview of a rapid video event specification workflow. An analyst
+      pre-processes a video collection to extract basic annotations about its 
+      contents (e.g., face detections from an off-the-shelf deep neural network 
+      and audio-aligned transcripts). The analyst then writes and iteratively 
+      refines Rekall queries that compose these annotations to specify new 
+      events of interest, until query outputs are satisfactory for use by 
+      downstream analysis applications.
+    </div>
+    <div class="abstract">
+      <h1>Abstract</h1>
+      <p>
+Many real-world video analysis applications require the ability to identify domain-specific events, such as interviews and commercials in TV news broadcasts, or action sequences in film. Unfortunately, pre-trained models to detect all the events of interest in video may not exist, and training new models from scratch can be costly and labor-intensive. In this paper, we explore the utility of specifying new events in video in a more traditional manner: by writing queries that compose the outputs of existing, pre-trained models. To write these queries, we have developed Rekall, a library that exposes a data model and programming model for compositional video event specification. Rekall represents video annotations from different sources (object detectors, transcripts, etc.) as spatiotemporal labels associated with continuous volumes of spacetime in a video, and provides operators for composing labels into queries that model new video events. We demonstrate the use of Rekall in analyzing video from cable TV news broadcasts and films. In these efforts, analysts were able to quickly (in a few hours to a day) author queries to detect new events. These queries were often on par with or more accurate than learned approaches (6.5 F1 points more accurate on average).
+      </p>
+    </div>
+    <div class="links">
+      <a class="link" href="files/rekall_poster_abstract.pdf">
+        Poster Abstract (PDF)
+      </a>
+      |
+      <a class="link" href="https://arxiv.org/abs/1910.02993">
+        Tech Report (arXiv)
+      </a>
+      | 
+      <a class="link" href="files/rekall_tech_report.pdf">
+        Hi-Res PDF (98.3 MB)
+      </a>
+      |
+      <a class="link" href="https://dawn.cs.stanford.edu/2019/10/09/rekall/">
+        Blog Post
+      </a>
+      |
+      <a class="link" href="https://github.com/scanner-research/rekall">
+        Code
+    </div>
+    <div id='video-cont'>
+      <h1>Supplemental Videos</h1>
+	    <div class="subheading">
+      Examples of video content retrieved using Rekall queries.
+      To view a video, click on its thumbnail.</div>
+      <div id='thumbnail-cont'></div>
+      <style>
+      .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+      }
+      .embed-container iframe, .embed-container object, .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      </style>
+      <div class="embed-container">
+        <iframe id='youtube-embedding' src="https://www.youtube.com/embed/O8gL6qBJ5Rc"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen=""></iframe>
+      </div>
+      <div id='vid-info'>
+        <span class="text-label">URL: </span><a id='now-playing' href='' target='_blank'></a><br>
+        <span class="text-label">Dataset: </span><span id='dset-label'></span><br>
+        <span class="text-label">Description: </span><span id='description'></span><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

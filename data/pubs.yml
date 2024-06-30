@@ -1,0 +1,437 @@
+- year: 2024
+  pubs:
+    - title: "Benchmarking and Building Long-Context Retrieval Models with LoCo and M2-BERT"
+      link: https://arxiv.org/abs/2402.07440v2
+      authors:
+        - name: Jon Saad-Falcon
+        - name: Daniel Y. Fu
+          me: True
+        - name: Simran Arora
+        - name: Neel Guha
+        - name: Christopher Ré
+      conf: "ICML 2024, ME-FoMo Workshop at ICLR 2024"
+      links:
+        - text: code
+          link: https://github.com/HazyResearch/m2
+        - text: blog post
+          link: https://hazyresearch.stanford.edu/blog/2024-05-20-m2-bert-retrieval
+    - title: "FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores"
+      link: https://arxiv.org/abs/2311.05908
+      authors:
+        - name: Daniel Y. Fu*
+          me: True
+        - name: Hermann Kumbong*
+        - name: Eric Nguyen
+        - name: Christopher Ré
+      conf: "ICLR 2024 / ENLSP Workshop at NeurIPS 2023, <strong>Best Poster</strong>"
+      links:
+        - text: code
+          link: https://github.com/HazyResearch/flash-fft-conv
+        - text: blog post
+          link: https://hazyresearch.stanford.edu/blog/2023-11-13-flashfftconv
+
+- year: 2023
+  pubs:
+    - title: "Monarch Mixer: A Simple Sub-Quadratic GEMM-Based Architecture"
+      link: https://arxiv.org/abs/2310.12109
+      authors:
+        - name: Daniel Y. Fu
+          me: True
+        - name: Simran Arora*
+        - name: Jessica Grogan*
+        - name: Isys Johnson*
+        - name: Sabri Eyuboglu*
+        - name: Armin W. Thomas*
+        - name: Benjamin F. Spector
+        - name: Michael Poli
+        - name: Atri Rudra
+        - name: Christopher Ré
+      conf: "NeurIPS 2023, <strong>Oral</strong>"
+      links:
+        - text: code
+          link: https://github.com/HazyResearch/m2
+        - text: blog post
+          link: https://hazyresearch.stanford.edu/blog/2023-07-25-m2-bert
+        - text: video
+          link: https://www.youtube.com/watch?v=IS59IwGLvVs
+    - title: "Laughing Hyena Distillery: Extracting Compact Recurrences from Convolutions"
+      link: "https://arxiv.org/abs/2310.18780"
+      authors:
+        - name: Stefano Massaroli*
+        - name: Michael Poli*
+        - name: Daniel Y. Fu*
+          me: True
+        - name: Hermann Kumbong
+        - name: David W. Romero
+        - name: Rom Nishijima Parnichkun
+        - name: Aman Timalsina
+        - name: Quinn McIntyre
+        - name: Beidi Chen
+        - name: Atri Rudra
+        - name: Ce Zhang
+        - name: Christopher Ré
+        - name: Stefano Ermon
+        - name: Yoshua Bengio
+      conf: "NeurIPS 2023"
+    - title: "High-throughput Generative Inference of Large Language Models with a Single GPU"
+      link: https://arxiv.org/abs/2303.06865
+      authors:
+        - name: Ying Sheng
+        - name: Lianmin Zheng
+        - name: Binhang Yuan
+        - name: Zhuohan Li
+        - name: Max Ryabinin
+        - name: Daniel Y. Fu
+          me: True
+        - name: Zhiqiang Xie
+        - name: Beidi Chen
+        - name: Clark Barrett
+        - name: Joseph E. Gonzalez
+        - name: Percy Liang
+        - name: Christopher Ré
+        - name: Ion Stoica
+        - name: Ce Zhang
+      conf: "ICML 2023, <strong>Oral</strong>"
+    - title: "Hyena Hierarchy: Towards Larger Convolutional Language Models"
+      link: https://arxiv.org/abs/2302.10866
+      authors:
+        - name: Michael Poli
+        - name: Stefano Massaroli
+        - name: Eric Nguyen
+        - name: Daniel Y. Fu
+          me: True
+        - name: Tri Dao
+        - name: Stephen Baccus
+        - name: Yoshua Bengio
+        - name: Stefano Ermon
+        - name: Christopher Ré
+      conf: "ICML 2023, <strong>Oral</strong>"
+      links:
+        - text: code
+          link: https://github.com/HazyResearch/safari
+        - text: blog post
+          link: https://hazyresearch.stanford.edu/blog/2023-03-07-hyena
+    - title: "Simple Hardware-Efficient Long Convolutions for Sequence Modeling"
+      link: https://arxiv.org/abs/2302.06646
+      authors:
+        - name: Daniel Y. Fu*
+          me: True
+        - name: Elliot L. Epstein*
+        - name: Eric Nguyen
+        - name: Armin W. Thomas
+        - name: Michael Zhang
+        - name: Tri Dao
+        - name: Atri Rudra
+        - name: Christopher Ré
+      conf: "ICML 2023"
+    - title: "Hungry Hungry Hippos: Towards Language Modeling with State Space Models"
+      link: https://arxiv.org/abs/2212.14052
+      authors:
+        - name: Daniel Y. Fu*
+          me: True
+        - name: Tri Dao*
+        - name: Khaled K. Saab
+        - name: Armin W. Thomas
+        - name: Atri Rudra
+        - name: Christopher Ré
+      conf: "ICLR 2023, <strong>Notable top-25% (spotlight)</strong>"
+
+- year: 2022
+  pubs:
+    - title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+      link: https://arxiv.org/abs/2205.14135
+      authors:
+        - name: Tri Dao
+        - name: Daniel Y. Fu
+          me: True
+        - name: Stefano Ermon
+        - name: Atri Ruda
+        - name: Christopher Ré
+      conf: "NeurIPS 2022, Hardware Aware Efficient Training Workshop at ICML 2022, <strong>Best Paper</strong> / Sparsity in Neural Networks Workshop 2022, <strong>Oral Presentation</strong>"
+      links:
+        - text: arxiv
+          link: https://arxiv.org/abs/2205.14135
+        - text: code
+          link: https://github.com/HazyResearch/flash-attention
+    - title: "Shoring Up the Foundations: Fusing Model Embeddings and Weak Supervision"
+      link: https://arxiv.org/abs/2203.13270
+      authors:
+        - name: Mayee F. Chen*
+        - name: Daniel Y. Fu*
+          me: True 
+        - name: Dyah Adila
+        - name: Michael Zhang
+        - name: Frederic Sala
+        - name: Kayvon Fatahalian
+        - name: Christopher Ré
+      conf: "UAI 2022, <strong>Best Student Paper Runner Up, Long Oral</strong>"
+      links:
+        - text: arxiv
+          link: https://arxiv.org/abs/2203.13270
+    - title: "Perfectly Balanced: Improving Transfer and Robustness in Supervised Contrastive Learning"
+      link: https://arxiv.org/abs/2204.07596
+      authors:
+        - name: Mayee F. Chen*
+        - name: Daniel Y. Fu*
+          me: True
+        - name: Avanika Narayan
+        - name: Michael Zhang
+        - name: Zhao Song
+        - name: Kayvon Fatahalian
+        - name: Christopher Ré
+      conf: ICML 2022
+      links:
+        - text: arxiv
+          link: https://arxiv.org/abs/2204.07596
+        - text: blog
+          link: https://hazyresearch.stanford.edu/blog/2022-04-19-contrastive-2
+        - text: code
+          link: https://github.com/HazyResearch/thanos-code
+    - title: "TABi: Type-Aware Bi-Encoders for Open-Domain Entity Retrieval"
+      link: https://openreview.net/pdf?id=5EmB7MRFWG3
+      authors:
+        - name: Megan Leszczynksi
+        - name: Daniel Y. Fu
+          me: True 
+        - name: Mayee F. Chen
+        - name: Christopher Ré
+      conf: Findings of the ACL, May 2022
+      links:
+        - text: pdf
+          link: https://openreview.net/pdf?id=5EmB7MRFWG3
+    - title: "The Details Matter: Preventing Class Collapse in Supervised Contrastive Learning"
+      link: https://www.mdpi.com/2813-0324/3/1/4
+      authors:
+        - name: Daniel Y. Fu*
+          me: True
+        - name: Mayee F. Chen*
+        - name: Michael Zhang
+        - name: Kayvon Fatahalian
+        - name: Christopher Ré
+      conf: "AIBDSD @ AAAI 2022, <strong>Best Paper</strong>"
+      links:
+        - text: pdf
+          link: https://www.mdpi.com/2813-0324/3/1/4
+- year: 2021
+  pubs:
+    - title: Analyzing Who and What Appears in a Decade of US Cable TV News
+      link: https://arxiv.org/abs/2008.06007
+      authors:
+        - name: James Hong
+        - name: Will Crichton
+        - name: Haotian Zhang
+        - name: Daniel Y. Fu
+          me: True
+        - name: Jacob Ritchie
+        - name: Jeremy Barenholtz
+        - name: Ben Hannel
+        - name: Xinwei Yao
+        - name: Michaela Murray
+        - name: Geraldine Moriba
+        - name: Maneesh Agrawala
+        - name: Kayvon Fatahalian
+      conf: KDD 2021
+      links:
+        - text: arXiv
+          link: https://arxiv.org/abs/2008.06007
+- year: 2020
+  pubs:
+    - title: "Beyond the Pixels: Exploring the Effect of Video File Corruptions on Model Robustness"
+      link: ""
+      authors:
+        - name: Trenton Chang
+        - name: Daniel Y. Fu
+          me: True
+        - name: Sharon Yixuan Li
+        - name: Christopher Ré
+      conf: ECCV 2020 Workshop on Adversarial Robustness in the Real World
+    # - title: "Train and You'll Miss It: Interactive Model Iteration with Weak Supervision and Pre-Trained Embeddings"
+    #   link: https://arxiv.org/abs/2006.15168
+    #   authors:
+    #     - name: Daniel Y. Fu*
+    #       me: True
+    #     - name: Mayee F. Chen*
+    #     - name: Frederic Sala
+    #     - name: Sen Wu
+    #     - name: Ravi Teja Mullapudi
+    #     - name: Fait Poms
+    #     - name: Kayvon Fatahalian
+    #     - name: Christopher Ré
+    #   conf: Paper on arXiv, June 2020
+    #   links:
+    #     - text: arXiv
+    #       link: https://arxiv.org/abs/2006.15168
+    #     - text: code
+    #       link: https://github.com/HazyResearch/epoxy
+    #       target: _blank
+    #     - text: video
+    #       link: https://youtu.be/_d-mseTaYWY
+    - title: "Fast and Three-rious: Speeding Up Weak Supervision with Triplet Methods"
+      link: https://arxiv.org/abs/2002.11955
+      authors:
+        - name: Daniel Y. Fu*
+          me: True
+        - name: Mayee F. Chen*
+        - name: Frederic Sala
+        - name: Sarah M. Hooper
+        - name: Kayvon Fatahalian
+        - name: Christopher Ré
+      conf: ICML 2020
+      links:
+        - text: arXiv
+          link: https://arxiv.org/abs/2002.11955
+        - text: blog post
+          link: http://hazyresearch.stanford.edu/flyingsquid
+        - text: code
+          link: https://github.com/HazyResearch/flyingsquid
+          target: _blank
+        - text: talk
+          link: http://youtu.be/pHadwUKCoNE
+- year: 2019
+  pubs:
+    - title: Multi-Resolution Weak Supervision for Sequential Data
+      link: https://arxiv.org/abs/1910.09505
+      authors:
+        - name: Frederic Sala
+        - name: Paroma Varma
+        - name: Jason Fries
+        - name: Daniel Y. Fu
+          me: True
+        - name: Shiori Sagawa
+        - name: Saelig Khattar
+        - name: Ashwini Ramamoorthy
+        - name: Ke Xiao
+        - name: Kayvon Fatahalian
+        - name: James R. Priest
+        - name: Christopher Ré
+      conf: NeurIPS 2019
+      links:
+        - text: arXiv
+          link: "https://arxiv.org/abs/1910.09505"
+    - title: "Rekall: Specifying Video Events using Compositions of Spatiotemporal Labels"
+      link: /projects/rekall-tech-report
+      authors:
+        - name: Daniel Y. Fu
+          me: True
+        - name: Will Crichton
+        - name: James Hong
+        - name: Xinwei Yao
+        - name: Haotian Zhang
+        - name: Anh Truong
+        - name: Avanika Narayan
+        - name: Maneesh Agrawala
+        - name: Christopher Ré
+        - name: Kayvon Fatahalian
+      conf: Paper on arXiv, Oct 2019
+      links:
+        - text: arXiv
+          link: https://arxiv.org/abs/1910.02993
+        - text: blog post
+          link: https://dawn.cs.stanford.edu/2019/10/09/rekall/
+        - text: code
+          link: https://github.com/scanner-research/rekall
+          target: _blank
+        - text: demo videos
+          link: /projects/rekall-tech-report
+    - title: Video Event Specification using Programmatic Composition
+      link: /projects/rekall-aisystems2019
+      authors:
+        - name: Daniel Y. Fu
+          me: True
+        - name: Will Crichton
+        - name: James Hong
+        - name: Xinwei Yao
+        - name: Haotian Zhang
+        - name: Anh Truong
+        - name: Avanika Narayan
+        - name: Maneesh Agrawala
+        - name: Christopher Ré
+        - name: Kayvon Fatahalian
+      conf: "AI Systems @ SOSP 2019, <strong>Oral Presentation</strong>"
+      links:
+        - text: pdf
+          link: /projects/rekall-aisystems2019
+- year: 2018
+  pubs:
+    - title: Influencing Flock Formation in Low-Density Settings
+      link: https://arxiv.org/abs/1804.08667
+      authors:
+        - name: Daniel Y. Fu
+          me: True
+        - name: Emily S. Wang
+        - name: Peter M. Krafft
+        - name: Barbara J. Grosz
+      conf: AAMAS 2018
+      links:
+        - text: arXiv
+          link: https://arxiv.org/abs/1804.08667
+        - text: code
+          link: https://github.com/DanFu09/flockers
+          target: _blank
+    - title: Automatic Parallelization of Sequential Programs
+      link: https://arxiv.org/abs/1809.07684
+      authors:
+        - name: Peter Kraft
+        - name: Amos Waterland
+        - name: Daniel Y. Fu
+          me: True
+        - name: Anitha Gollamudi
+        - name: Shai Szulanski
+        - name: Margo Seltzer
+      conf: Paper on arXiv, Jul 2018
+      links:
+        - text: arXiv
+          link: https://arxiv.org/abs/1809.07684
+    - title: Design of Influencing Agents for Flocking in Low-Density Settings
+      link: files/SeniorThesis.pdf
+      authors:
+        - name: Daniel Y. Fu
+          me: True
+      conf: Undergraduate Senior Thesis (Harvard University), 2018
+      links:
+        - text: manuscript
+          link: files/SeniorThesis.pdf
+- year: Older Papers
+  pubs:
+    - title: "Orexinergic Neurotransmission in Temperature Responses to Methamphetamine and Stress: Mathematical Modeling as a Data Assimilation Approach"
+      link: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0126719
+      authors:
+        - name: Abolhassan Behrouzvaziri
+        - name: Daniel Fu
+          me: True
+        - name: Patrick Tan
+        - name: Yeonjoo Yoo
+        - name: Maria V. Zaretskaia
+        - name: Daniel E. Rusyniak
+        - name: Yaroslav I. Molkov
+        - name: Dmitry V. Zaretsky
+      conf: PLOS ONE, May 2015
+      links:
+        - text: pdf
+          link: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090666
+    - title: Chaos and Robustness in a Single Family of Genetic Oscillatory Networks
+      link: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090666
+      authors: 
+        - name: Daniel Fu
+          me: True
+        - name: Patrick Tan
+        - name: Alexey Kuznetsov
+        - name: Yaroslav I. Molkov
+      conf: PLOS ONE, Mar 2014
+      links:
+        - text: pdf
+          link: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090666
+        - text: talk
+          link: https://www.youtube.com/watch?v=R_ZN7Q6YJV8
+        - text: coverage
+          link: http://www.evaluategroup.com/Universal/View.aspx?type=Story&id=355263
+          target: _blank
+    - title: Orexinergic Neurotransmission in Temperature Responses to Methamphetamines
+      link: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0126719
+      authors:
+        - name: Yaroslav Molkov
+        - name: Daniel Fu
+          me: True 
+        - name: Maria Zaretskaia
+        - name: Dmitry Zaretsky
+      conf: Computational Neurosciences (CNS) 2013

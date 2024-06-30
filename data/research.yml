@@ -1,0 +1,176 @@
+- title: "FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores"
+  conf: "ICLR 2024, ENLSP Workshop at NeurIPS 2023 (Best Poster, Oral Presentation)"
+  desc: "Convolution models with long filters now have state-of-the-art reasoning abilities in many long-sequence tasks, from long-range language modeling to audio analysis and DNA modeling. But they lag behind the most optimized Transformers in wall-clock time. A major bottleneck is the Fast Fourier Transform (FFT), which allows long convolutions to run in O(NlogN) time in sequence length N but has poor hardware utilization. We propose FlashFFTConv, a new algorithm for efficiently computing the FFT convolution on GPUs. FlashFFTConv speeds up convolutions by up to 7.93x over PyTorch and achieves up to 4.4x speedup end-to-end. Starting at sequence length 2K, FlashFFTConv starts to match the performance of FlashAttention-v2 – and outperforms it for longer sequences, achieving up to 62% MFU."
+  links:
+    - text: arXiv
+      link: https://arxiv.org/abs/2311.05908
+    - text: blog post
+      link: https://hazyresearch.stanford.edu/blog/2023-11-13-flashfftconv
+    - text: code
+      link: https://github.com/HazyResearch/flash-fft-conv
+- title: "Monarch Mixer: A Simple Sub-Quadratic GEMM-Based Architecture"
+  conf: "NeurIPS 2023 (Oral Presentation)"
+  desc: "Machine learning models are increasingly being scaled in both sequence length and model dimension to reach longer contexts and better performance. However, existing architectures like Transformers scale quadratically along both these axes. We explore Monarch Mixer (M2), a new architecture that uses the same sub-quadratic primitive along both sequence length and model dimension. M2 mixes information along the sequence and model dimensions using Monarch matrices, a simple class of expressive structured matrices that captures many linear transforms, achieves high hardware efficiency on GPUs, and scales sub-quadratically."
+  links:
+    - text: arXiv
+      link: https://arxiv.org/abs/2310.12109
+    - text: blog post
+      link: https://hazyresearch.stanford.edu/blog/2023-07-25-m2-bert
+    - text: code
+      link: https://github.com/HazyResearch/m2
+    - text: MlSys Seminar
+      link: https://www.youtube.com/watch?v=IS59IwGLvVs
+    - text: long-context retrievers
+      link: https://hazyresearch.stanford.edu/blog/2024-01-11-m2-bert-retrieval
+# - title: "Hyena Hierarchy: Towards Larger Convolutional Language Models"
+#   conf: "ICML 2023 (Oral Presentation)"
+#   desc: "Recent advances in deep learning have relied heavily on the use of large Transformers due to their ability to learn at scale. However, the core building block of Transformers, the attention operator, exhibits quadratic cost in sequence length, limiting the amount of context accessible. In this work, we propose Hyena, a subquadratic drop-in replacement for attention constructed by interleaving implicitly parametrized long convolutions and data-controlled gating. In recall and reasoning tasks on sequences of thousands to hundreds of thousands of tokens, Hyena improves accuracy by more than 50 points over operators relying on state-spaces and other implicit and explicit methods, matching attention-based models. We set a new state-of-the-art for dense-attention-free architectures on language modeling in standard datasets (WikiText103 and The Pile), reaching Transformer quality with a 20% reduction in training compute required at sequence length 2K. Hyena operators are twice as fast as highly optimized attention at sequence length 8K, and 100x faster at sequence length 64K."
+#   links:
+#     - text: arXiv
+#       link: https://arxiv.org/abs/2302.10866
+#     - text: code
+#       link: https://github.com/HazyResearch/safari
+#     - text: blog post
+#       link: https://hazyresearch.stanford.edu/blog/2023-03-07-hyena
+#     - text: ZDNet article
+#       link: https://www.zdnet.com/article/this-new-technology-could-blow-away-gpt-4-and-everything-like-it/
+# - title: "Simple Hardware-Efficient Long Convs for Sequence Modeling"
+#   conf: "ICML 2023"
+#   desc: "What is the simplest architecture you can use to get good performance on sequence modeling? State space models (SSMs) have high performance on long sequence modeling but require sophisticated initialization techniques and specialized implementations for high quality and runtime performance. We study whether a simple alternative can match SSMs in performance and efficiency: directly learning long convolutions over the sequence."
+#   links:
+#     - text: arXiv
+#       link: https://arxiv.org/abs/2302.06646
+#     - text: code
+#       link: https://github.com/HazyResearch/safari
+#     - text: blog post
+#       link: https://hazyresearch.stanford.edu/blog/2023-02-15-long-convs
+- title: "Hungry Hungry Hippos: Towards Language Modeling with State Space Models"
+  conf: "ICLR 2023 (Notable top-25% / spotlight)"
+  desc: "Attention is all you need... but how much attention do you need? We present H3, a new language model that reproduces the performance of the best open source models with only two attention layers. We take a mechanistic interpretability view on Transformers to understand the gap between state space models and attention. We design the new H3 layer to plug a critical gap: the ability to compare tokens across the sequence. Then we introduce FlashConv, an IO-aware algorithm for state space models to improve their efficiency. Using FlashConv, we train H3 language models up to 2.7B parameters in size on the PILE."
+  links:
+    - text: arXiv
+      link: https://arxiv.org/abs/2212.14052
+    - text: code
+      link: https://github.com/HazyResearch/H3
+    - text: blog post (H3 layer)
+      link: https://hazyresearch.stanford.edu/blog/2023-01-20-h3
+    - text: blog post (FlashConv)
+      link: https://www.together.xyz/blog/h3
+    - text: TwiML Podcast
+      link: https://www.youtube.com/watch?v=CkWX1zNQ7uU
+    - text: Neural Notes Podcast
+      link: https://www.youtube.com/watch?v=ULILmoHjWkU
+    - text: AI Pub interview
+      link: https://open.spotify.com/episode/45eXtVEE6ADODNQIMD6G8I?si=3SMiV6EsS9aFfU4hMh5Ehw&nd=1
+    - text: MILA reading group talk
+      link: https://www.youtube.com/watch?v=TkOSKrlpnU4
+- title: "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+  conf: 'NeurIPS 2022, Hardware Aware Efficient Training Workshop @ ICML 2022 (Best Paper), Sparsity in Neural Networks Workshop 2022 (Oral Presentation)'
+  desc: "We propose FlashAttention, a new algorithm for attention that takes the cost of reads and writes to GPU memory into account. FlashAttention yields faster training times (new MLPerf record, 3X speedup on GPT-2) and enables longer sequence models -- the first Transformers to solve Path-X and Path-256. Since release, we've been thrilled to see tons of widespread adoption -- upstreamed in PyTorch and HuggingFace, Meta's fast inference engine, deployed in the main branch of HuggingFace Diffusers, and reimplementations from the xformers team at Meta, to the Triton team at OpenAI, and open-sourced implementations in Jax."
+  links:
+    - text: arXiv
+      link: https://arxiv.org/abs/2205.14135
+    - text: code
+      link: https://github.com/HazyResearch/flash-attention
+# - title: Fusing Foundation Models and Weak Supervision
+#   conf: 'UAI 2022 (Best Student Paper Runner Up, Long Oral)'
+#   desc: How do you fuse the signal from foundation models with the signal from weak supervision? We propose a new weak supervision framework that uses embeddings from foundation models as the key interface. We show how to combine them in a principled way to improve quality and coverage!
+#   links:
+#     - text: arXiv
+#       link: https://arxiv.org/abs/2203.13270
+#     - text: early version
+#       link: https://arxiv.org/abs/2006.15168
+# - title: Advances in Supervised Contrastive Learning
+#   conf: 'ICML 2022, AIBSD @ AAAI 2022 (Best Paper), Findings of the ACL 2022'
+#   desc: 'We have a line of research on how to use and improve supervised contrastive learning, from a geometric perspective. In <a href="https://www.mdpi.com/2813-0324/3/1/4">The Details Matter</a> (best paper at AIBSD 2022), we argue that preventing class collapse is important for embedding quality. In <a href="https://arxiv.org/abs/2204.07596">Perfectly Balanced</a>, we look at what properties of an embedding result in good transfer and robustness and propose two mechanisms for achieving those properties in supervised contrastive learning. In <a href="https://openreview.net/pdf?id=5EmB7MRFWG3">TABi</a>, we look at how to apply supervised contrastive to entity retrieval. Check out our <a href="https://hazyresearch.stanford.edu/blog/2022-04-19-contrastive-1">blog posts</a> summarizing our progress in this area!'
+#   links:
+#     - text: Blog (3-part series)
+#       link: https://hazyresearch.stanford.edu/blog/2022-04-19-contrastive-1
+#     - text: The Details Matter
+#       link: https://www.mdpi.com/2813-0324/3/1/4
+#     - text: Perfectly Balanced
+#       link: https://arxiv.org/abs/2204.07596
+#     - text: TABi
+#       link: https://openreview.net/pdf?id=5EmB7MRFWG3
+# - title: Analyzing Who and What Appears in a Decade of US Cable TV News
+#   conf: KDD 2021
+#   desc: 'Cable TV news reaches millions of U.S. households each day, and decisions about who appears on the news, and what stories get talked about, can profoundly influence public opinion and discourse. We use computational techniques to analyze a data set of nearly 24/7 video, audio, and text captions from three major U.S. cable TV networks (CNN, FOX News, and MSNBC) from the last decade.'
+#   links:
+#     - text: arXiv
+#       link: https://arxiv.org/abs/2008.06007
+#     - text: stanford cable tv news analyzer
+#       link: https://tvnews.stanford.edu/
+# # - title: 'Epoxy: Interactive Model Iteration with Weak Supervision and Pre-Trained Embeddings'
+# #   desc: 'We take a first step towards building models that can be iterated on at programmatically-interactive speeds (seconds instead of hours or days). We build on work in weak supervision and pre-trained embeddings to create models that can approach the quality of training deep networks, but without the cost of training to fine-tune feature representations.'
+# #   links:
+# #     - text: arXiv
+# #       link: https://arxiv.org/abs/2006.15168
+# #     - text: code
+# #       link: https://github.com/HazyResearch/epoxy
+# #       target: _blank
+# #     - text: video
+# #       link: https://youtu.be/_d-mseTaYWY
+# - title: 'FlyingSquid: Faster and More Interactive Weak Supervision'
+#   conf: ICML 2020
+#   desc: 'We present FlyingSquid, a new weak supervision framework that runs orders of magnitude faster than previous work. Our speedups come from a closed-form solution to latent variable estimation, which enables weakly-supervised video analysis and online learning applications.'
+#   links:
+#     - text: arXiv
+#       link: https://arxiv.org/abs/2002.11955
+#     - text: blog post
+#       link: http://hazyresearch.stanford.edu/flyingsquid
+#     - text: code
+#       link: https://github.com/HazyResearch/flyingsquid
+#       target: _blank
+#     - text: talk
+#       link: http://youtu.be/pHadwUKCoNE
+# - title: Multi-Resolution Weak Supervision for Sequential Data
+#   conf: NeurIPS 2019
+#   desc: We present a framework to apply weak supervision to multi-resolution data like videos and time-series data that can handle sequential correlations among supervision sources. We experimentally validate our system over population-level video datasets and gait sensor data.
+#   links:
+#     - text: arXiv
+#       link: https://arxiv.org/abs/1910.09505
+# - title: 'Rekall: Specifying Video Events using Compositions of Spatiotemporal Labels'
+#   conf: 'AI Systems @ SOSP 2019 (Oral)'
+#   desc: We present Rekall, a data model and programming model for detecting new events in video collections by composing the outputs of pre-trained models. We demonstrate the use of Rekall in analyzing video from cable TV news broadcasts, films, static-camera vehicular video streams, and commercial autonomous vehicle logs.
+#   links:
+#     - text: arXiv
+#       link: https://arxiv.org/abs/1910.02993
+#     - text: blog post
+#       link: https://dawn.cs.stanford.edu/2019/10/09/rekall/
+#     - text: code
+#       link: https://github.com/scanner-research/rekall
+#       target: _blank
+#     - text: demo videos
+#       link: /projects/rekall-tech-report
+# - title: Influencing Agents for Flock Formation in Low-Density Settings
+#   conf: AAMAS 2018 
+#   desc: We study the problem of how to control flocking behavior in low-density environments. We find that some strategies that have worked well in high-density conditions are often less effective in lower-density environments, and propose new strategies for low-density environments. In an undergraduate thesis, we also explored using genetic algorithms to evolve influencing agent behaviors.
+#   links:
+#     - text: aamas paper
+#       link: https://arxiv.org/abs/1804.08667
+#     - text: undergraduate thesis
+#       link: files/SeniorThesis.pdf
+#     - text: code
+#       link: https://github.com/DanFu09/influencingagents
+#       target: _blank
+# - title: Automatically Scalable Computation
+#   desc: The ASC project seeks to create a powerful, practical automatic parallelization runtime by using machine learning to predict future states of a program and running speculative executions from those states. If the main program hits any of the predicted states, ASC can speed up execution by skipping the main program to the end of the speculative execution. Prior work  has shown that this approach is promising, but did not actually manage to achieve speedup on native hardware, since it the main program on an emulator. We have been working on making this approach work on native hardware.
+#   links:
+#     - text: arXiv
+#       link: https://arxiv.org/abs/1809.07684
+# - title: Modeling Effects of Meth on Temperature
+#   conf: PLOS One 2015, CNS 2013 Paris, Siemens Research Competition 2013 semifinalist
+#   desc: We develop mathematical models to understand the complex response of body temperature to methamphetamine and use our models to separate out the individual components of the response. We further analyze the ways that this response changes when orexinergic neurotransmission is inhibited.
+#   links:
+#     - text: pdf
+#       link: files/OrexinergicNeurotransmissionMeth.pdf
+# - title: Dynamics of Genetic Oscillatory Networks
+#   conf: PLOS One 2014, Siemens Research Competition 2012 team runner-up
+#   desc: We analyze a family of delay differential equations used to model  genetic oscillatory networks, and use our findings to develop two new mathematical methods for analyzing such models.
+#   links:
+#     - text: pdf
+#       link: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090666
+#     - text: talk
+#       link: https://www.youtube.com/watch?v=R_ZN7Q6YJV8
+#     - text: coverage
+#       link: http://www.evaluategroup.com/Universal/View.aspx?type=Story&id=355263

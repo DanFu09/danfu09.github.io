@@ -1,0 +1,131 @@
+- title: "Long-Context Retrieval Models with Monarch Mixer"
+  link: https://hazyresearch.stanford.edu/blog/2024-01-11-m2-bert-retrieval
+  date: Jan 11, 2024
+  authors: Jon Saad-Falcon, Dan Fu, Simran Arora
+  blurb: "Text embeddings are a critical piece of many pipelines, from search, to RAG, to vector databases and more. Most embedding models are BERT/Transformer-based and typically have short context lengths (e.g., 512). That’s only about two pages of text, but documents can be very long – books, legal cases, TV screenplays, code repositories, etc can be tens of thousands of tokens long (or more). Here, we’re taking a first step towards developing long-context retrieval models."
+
+- title: "Monarchs and Butterflies: Towards Sub-Quadratic Scaling in Model Dimension"
+  link: https://hazyresearch.stanford.edu/blog/2023-12-11-truly-subquadratic
+  date: Dec 11, 2023
+  authors: "Dan Fu, with work from past & present students of Hazy Research"
+  blurb: "Over the past few years, a line of work in our lab has been to look at how we can make a core operation in ML models more efficient: matrix multiplication. Matrix multiply operations take up a majority of FLOPs and runtime in a model (up to 99% of the FLOPs, in one analysis). A major portion of this matrix multiply cost, especially for large models, is in the MLP layers and projection layers—which have cost that grows quadratically in the model dimension. This blog post will give a brief survey of a line of work from our lab that has started to chip away at this quadratic cost—and has started to go towards models that are sub-quadratic in model dimension. If we can develop models that have similar quality but that scale sub-quadratically, we could start seeing some radically more efficient models."
+
+- title: "Long Convolutions for GPT-like Models: Polynomials, Fast Fourier Transforms, and Causality"
+  link: https://hazyresearch.stanford.edu/blog/2023-12-11-conv-tutorial
+  date: Dec 11, 2023
+  authors: Chris Ré, Dan Fu
+  blurb: "We’ve been writing a series of papers (1, 2, 3) that have at their core so-called long convolutions, with an aim towards enabling longer-context models. These are different from the 3x3 convolutions people grew up with in vision because well, they are longer–in some cases, with filters as long as the whole sequence. A frequent line of questions we get is about what these long convolutions are and how we compute them efficiently, so we put together a short tutorial. At the end of this, you’ll remember convolutions, Fast Fourier Transforms (FFTs), and understand how causality in this transformation is important to enable GPT-like models."
+
+- title: "FlashFFTConv: Efficient Convolutions for Long Sequences with Tensor Cores"
+  link: https://hazyresearch.stanford.edu/blog/2023-11-13-flashfftconv
+  date: Nov 13, 2023
+  authors: Dan Fu*, Hermann Kumbong*, Eric Nguyen, Chris Ré
+  blurb: "Convolution models with long filters now have state-of-the-art reasoning abilities in many long-sequence tasks, from long-range language modeling to audio analysis and DNA modeling. But they lag behind the most optimized Transformers in wall-clock time. A major bottleneck is the Fast Fourier Transform (FFT), which allows long convolutions to run in O(NlogN) time in sequence length N but has poor hardware utilization. We propose FlashFFTConv, a new algorithm for efficiently computing the FFT convolution on GPUs. FlashFFTConv speeds up convolutions by up to 7.93x over PyTorch and achieves up to 4.4x speedup end-to-end. Starting at sequence length 2K, FlashFFTConv starts to match the performance of FlashAttention-v2 – and outperforms it for longer sequences, achieving up to 62% MFU."
+
+- title: "Monarch Mixer: Revisiting BERT, Without Attention or MLPs"
+  link: https://hazyresearch.stanford.edu/blog/2023-07-25-m2-bert
+  date: Jul 25, 2023
+  authors: Dan Fu, Simran Arora, Chris Ré
+  blurb: "Over the past six years, we’ve seen Transformers take the world by storm. We think Transformers are great (and have had lots of fun optimizing them), but we’ve also been thinking about a deeper question: Are Transformers the only way to get this amazing performance? What if there were a model that were sub-quadratic along both sequence length and model dimension, and could match Transformers in quality? Today we’re excited to present a little teaser of some work in this direction – Monarch Mixer BERT (M2-BERT). M2-BERT is sub-quadratic in sequence length and model dimension, has 25% fewer parameters/FLOPs than BERT, and matches in quality (potentially exceeding a little bit when parameter-matched)."
+
+- title: "The Safari of Deep Signal Processing: Hyena and Beyond"
+  authors: Michael Poli, Stefano Massaroli, Simran Arora, Dan Fu, Stefano Ermon, Chris Ré
+  link: https://hazyresearch.stanford.edu/blog/2023-06-08-hyena-safari
+  date: Jun 8, 2023
+  blurb: "The quest for architectures supporting extremely long sequences continues! There have been some exciting developments on long sequence models and alternatives to Transformers. Anthropic released an API for a model supporting 100k context length and Magic announced a model with 5 million context length (notably not a Transformer!). On the open-source front the RWKV team collected their insights into a paper and MosaicML got a Transformer to 65k context length with ALiBi positional encodings. We have also been hard at work - and would like to use this opportunity to share some of our research and perspectives on efficient architectures for long sequences based on signal processing."
+
+- title: "From Deep to Long Learning?"
+  authors: Dan Fu, Michael Poli, Chris Ré
+  link: https://hazyresearch.stanford.edu/blog/2023-03-27-long-learning
+  date: Mar 28, 2023
+  blurb: "For the last two years, a line of work in our lab has been to increase sequence length. We thought longer sequences would enable a new era of machine learning foundation models: they could learn from longer contexts, multiple media sources, complex demonstrations, and more. This article is about our approach to increasing sequence length at a high level, and the connection to a new set of primitives."
+
+- title: "Hyena Hierarchy: Towards Larger Convolutional Language Models"
+  authors: Michael Poli, Stefano Massaroli, Eric Nguyen, Dan Fu, Tri Dao, Stephen A. Baccus, Yoshua Bengio, Stefano Ermon, Chris Ré
+  link: https://hazyresearch.stanford.edu/blog/2023-03-07-hyena
+  date: Mar 7, 2023
+  blurb: "We're excited to share our latest work on Hyena, a subquadratic-time layer that has the potential to significantly increase context length in sequence models, using a combination of long convolutions and gating."
+
+- title: "Simple Long Convolutions for Sequence Modeling"
+  authors: Dan Fu, Elliot Epstein, Eric Nguyen, Armin Thomas, Michael Zhang, Tri Dao, Atri Rudra, Chris Ré
+  link: https://hazyresearch.stanford.edu/blog/2023-02-15-long-convs
+  date: Feb 15, 2023
+  blurb: "Over the past couple years, we’ve been studying how to get good performance on sequence modeling, and developing both new systems techniques and new deep learning architectures to get there. Today, we’re going to take a look at a simple baseline that can do surprisingly well: just use a long convolution the size of the input sequence! It turns out that we just need a simple regularization, and then convolutions can match more complicated sequence models like S4 on benchmarks like the Long Range Arena and text modeling."
+
+- title: "FlashConv: Speeding up State Space Models"
+  authors: Dan Fu, Tri Dao
+  link: https://www.together.xyz/blog/h3
+  date: Jan 23, 2023
+  blurb: "State space models (SSMs) are a promising alternative to attention – they scale nearly-linearly with sequence length instead of quadratic. However, SSMs often run slower than optimized implementations of attention out of the box, since they have low FLOP utilization on GPU. How can we make them run faster? In this blog post, we’ll go over FlashConv, our new technique for speeding up SSMs. We’ll see how in language modeling, this helped us train SSM-based language models (with almost no attention!) up to 2.7B parameters – and run inference 2.4x faster than Transformers."
+
+- title: "H3: Language Modeling with State Space Models and (Almost) No Attention"
+  authors: Dan Fu, Tri Dao, Khaled Saab, Armin Thomas, Atri Rudra, Chris Ré
+  link: https://hazyresearch.stanford.edu/blog/2023-01-20-h3
+  date: Jan 23, 2023
+  blurb: "State space models (SSMs) are strong general-purpose sequence models, but have underperformed attention in language modeling. How can we close this gap? In this blog post, we’ll take a look at some critical capability gaps – using some simple synthetic languages of in-context as a guide. We’ll use our understanding to build H3 (Hungry Hungry Hippos), our new SSM layer for language modeling. With H3, we can replace almost all the attention layers in GPT-style transformers while beating or matching quality. We’ve scaled H3 up to 2.7B-parameters, and are releasing weights and code today. Check it out and let us know what you think!"
+
+- title: "Fast Stable Diffusion with FlashAttention + Diffusers"
+  authors: Dan Fu, Tri Dao, Chris Ré
+  link: https://hazyresearch.stanford.edu/blog/2022-10-12-flashattention-diffusion
+  date: Oct 13, 2022
+  blurb: "We sped up Stable Diffusion in the Diffusers library by adding FlashAttention - improving throughput by up to 4x over an unoptimized version of diffusers. On a single A100, we can now generate high-quality images with 50 denoising steps faster than 1 image/second."
+
+- title: "Simplifying S4"
+  authors: Chris Ré, Dan Fu, Karan Goel, Khaled Saab
+  link: https://hazyresearch.stanford.edu/blog/2022-06-11-simplifying-s4
+  date: June 21, 2022
+  blurb: "One goal of deep learning research is to find the simplest architectures that lead to the amazing results that we've seen for the last few years. In that spirit, we discuss the recent S4 architecture, which we think is simple—the structured state space model at its heart has been the most basic building block for generations of electrical engineers. However, S4 has seemed mysterious—and there are some subtleties to getting it to work in deep learning settings efficiently. We do our best to explain why it's simple, based on classical ideas, and give a few key twists."
+
+- title: "Can Longer Sequences Help Take the Next Leap in AI?"
+  authors: Chris Ré, Tri Dao, Dan Fu, Karan Goel
+  link: https://hazyresearch.stanford.edu/blog/2022-06-09-longer-sequences-next-leap-ai
+  date: June 9, 2022
+  blurb: "Deep learning has revolutionized machine learning. To a first approximation, deeper has been better. However, there is another dimension to scale these models: the size of the input. Even the world’s most impressive models can only process long-form content by dismembering it into isolated, disconnected chunks of a few hundred words to fit their length requirements. The goal of this blog post is to share why we are excited about this seemingly narrow topic of sequence length, which is sometimes only obvious to the subcommunity working on it - and point to some new work in these directions."
+
+- title: "TABi: Type-Aware Bi-Encoders for Open-Domain Entity Retrieval"
+  authors: Megan Leszczynski, Dan Fu, Mayee Chen, and Chris Ré
+  link: https://hazyresearch.stanford.edu/blog/2022-04-19-contrastive-3
+  date: Apr 19, 2022
+  blurb: "State-of-the-art retrievers for open-domain natural language processing (NLP) tasks can exhibit popularity biases and fail to retrieve rare entities. We introduce a method to improve retrieval of rare entities by incorporating knowledge graph types through contrastive learning."
+
+- title: Improving Transfer and Robustness in Supervised Contrastive Learning
+  authors: Mayee Chen, Dan Fu, Avanika Narayan, Michael Zhang, Zhao Song, Kayvon Fatahalian, and Chris Ré
+  link: https://hazyresearch.stanford.edu/blog/2022-04-19-contrastive-2
+  date: Apr 19, 2022
+  blurb: 'In this blog post, we take a look at how to learn a representation with good transfer and robustness properties using supervised contrastive learning. In short, we identify two key points: we need to ensure the right amount of “spread” in the geometry of the representation, and we need to break a particular invariance that naturally arises from analysis of the contrastive loss function. We present two modifications to supervised contrastive learning that result in significant improvements in transfer and robustness.'
+
+- title: Advances in Understanding, Improving, and Applying Contrastive Learning
+  authors: Dan Fu, Mayee Chen, Megan Leszczynski, and Chris Ré
+  link: https://hazyresearch.stanford.edu/blog/2022-04-19-contrastive-1
+  date: Apr 19, 2022
+  blurb: "Contrastive learning has emerged as a powerful method for training ML models. In this series of three blog posts, we’ll discuss recent advances in understanding the mechanisms behind contrastive learning. We’ll see how we can use those insights to get better learned representations out of supervised contrastive learning, and see how we can apply contrastive learning to improve long-tailed entity retrieval."
+
+- title: Three Lessons I Learned About Applying Design Thinking to Machine Learning Research
+  authors: Dan Fu
+  link: https://realdanfu.medium.com/three-lessons-i-learned-about-applying-design-thinking-to-machine-learning-research-b087c27a8f68
+  date: Mar 17, 2021
+  blurb: "Three lessons (and concrete tools!) I’ve learned about applying the design thinking process to machine learning research."
+
+- title: The Coming Wave of ML Systems
+  authors: Chris Ré, Piero Molino, Dan Fu, Karan Goel, Fiodar Kazhamakia, and Matei Zaharia
+  link: https://hazyresearch.stanford.edu/blog/2020-10-13-mlsys
+  date: Oct 12, 2020
+  blurb: AI and ML products now permeate every aspect of our digital lives--from recommendations of what to watch, to divining our search intent, to powering increasingly-present virtual assistants in consumer and enterprise settings. While quality improvements are the main focus of traditional ML and AI research, a second and arguably less well understood benefit of machine learning is that it can dramatically reshape the practice of building applications. With an eye toward generations of compiler, database, and operating systems work, they may inspire new foundational questions for how to build the next generation of AI-powered systems.
+
+- title: "Software 2.0 and Data Programming: Lessons Learned, and What’s Next"
+  authors: Dan Fu, Laurel Orr, and students of HazyResearch
+  link: https://hazyresearch.stanford.edu/blog/2020-02-28-software2
+  date: Feb 27, 2020
+  blurb: Four years ago, the idea that you could use a statistical process to help people label training data from noisy sources sounded absolutely crazy. But since then, the ideas that we formalized into data programming and weak supervision in Snorkel have had a surprisingly broad degree of impact.
+
+- title: Towards Interactive Weak Supervision with FlyingSquid
+  authors: Dan Fu, Mayee Chen, Fred Sala, Sarah Hooper, Kayvon Fatahalian, and Chris Ré
+  link: https://hazyresearch.stanford.edu/blog/2020-02-28-flyingsquid
+  date: Feb 27, 2020
+  blurb: "Over the past few years, we've been studying programatically creating labels with weak supervision to address this training data bottleneck; instead of relying on manual labels, data programming uses weak supervision---multiple noisy label sources---to automatically generate labeled datasets. FlyingSquid is our latest work in this direction---it exploits a powerful three views technique to quickly generate a model producing labels. This speedup brings us a step closer to faster and more interactive development cycles for weak supervision, with exciting implications for applications like video and online learning."
+
+- title: "Why Train What You Can Code? Rekall: A Compositional Approach to Video Analysis"
+  authors: Dan Fu, Chris Ré, Kayvon Fatahalian
+  link: https://dawn.cs.stanford.edu/2019/10/09/rekall/
+  date: Oct 09, 2019
+  blurb: "Many real-world video analysis applications require the ability to identify domain-specific events in video, such as interviews and commercials in TV news broadcasts, or action sequences in film. Pre-trained models to detect all events of interest often do not exist, and training new models from scratch can be costly and labor-intensive. In this blog post, we discuss an alternative approach to specifying new events in video: by writing queries that compose the outputs of existing, pre-trained models using a new programming model for video analysis called Rekall."

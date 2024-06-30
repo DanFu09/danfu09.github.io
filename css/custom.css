@@ -1,0 +1,255 @@
+.container {
+  max-width: 1000px; }
+.header {
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  text-align: center; }
+.header .square {
+  border-radius: 25px; }
+.header h1 {
+  font-size: 40px; }
+.header h2 {
+  font-size: 30px;}
+.header img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem; }
+.circle {
+  border-radius: 200px;
+}
+.docs-header {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-weight: 600; }
+h6.docs-header {
+  font-size: 1.4rem;
+}
+h5 {
+  text-align: center;
+}
+.social-item a {
+  color: #222;
+}
+a.github-fork {
+  color: #222;
+}
+a {
+  color: #8C1515;
+  text-decoration: underline; 
+}
+a:hover {
+  color: #8a887d;
+  text-decoration: none;
+}
+.docs-section {
+  border-top: 1px solid #eee;
+  padding: 2rem 0;
+  margin-bottom: 0;
+}
+.docs-section.top {
+  border: none;
+}
+.experience-example {
+  position: relative; 
+  display: block;
+  text-align: center; }
+.logo-container {
+  height: 6rem;
+  padding: 1rem;
+}
+.logo-container > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.columns.project-example {
+  margin-right: 2%;
+  margin-left: 0;
+}
+.fa-external-link {
+  position: relative;
+  margin-right: .25em;
+  left: .25em;
+  top: -.5em;
+  font-size: 0.8rem;
+}
+footer {
+  padding-bottom:2rem;
+}
+.float-right {
+  float: right;
+}
+.top-margin {
+  margin-top: 2rem;
+}
+.bottom-margin {
+  margin-bottom: 2rem;
+}
+h6 {
+  margin-bottom: 0rem;
+}
+.conferences {
+  color: #8C1515;
+  font-weight: 600;
+}
+
+table {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0;
+}
+td {
+  border-bottom: none;
+}
+
+/* Social links */
+.social-links {
+  text-align: center;
+}
+.social-item {
+  margin-left:1rem;
+  margin-right:1rem;
+}
+.social-item a {
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar + .docs-section {
+  border-top-width: 0; }
+.navbar,
+.navbar-spacer {
+  width: 100%;
+  background: #fff;
+  z-index: 99;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
+.navbar-spacer {
+  display: none;
+}
+.navbar > .container {
+  width: 100%; }
+.navbar-list {
+  display: none;
+  list-style: none;
+  margin-bottom: 0; }
+.always-display-navbar .navbar-list {
+  display: block;
+}
+.navbar-item {
+  position: relative;
+  float: left;
+  margin-bottom: 0; }
+.navbar-link {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  margin-right: 35px;
+  text-decoration: none;
+  line-height: 4rem;
+  color: #222; }
+.navbar-item:last-child .navbar-link {
+  margin-right: 0;
+}
+.navbar-link.active {
+  color: #33C3F0; }
+.navbar-toggle {
+  display: block;
+  float: right;
+}
+.navbar-toggle .fa {
+  line-height: 4rem;
+  font-size: 2rem;
+}
+.has-docked-nav .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-top: 0px;
+ }
+.has-docked-nav .navbar-spacer {
+  display: block; }
+
+/* Publications */
+.publication {
+  margin-top: 2rem; }
+/*.paper-title {
+  font-weight: bold; }*/
+.my-name {
+  font-weight: 600; }
+.paper-conference {
+  font-style: italic; }
+
+/* Teaching Experience */
+.teaching-experience {
+  margin-top: 2rem; }
+.teaching-class-name {
+  font-weight: bold; }
+
+/* Blog */
+.blog h5 a {
+  color: black;
+  text-decoration-color: #EEE;
+}
+.blog h5 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.blog-authors {
+  color: #666;
+  margin-bottom: 5px;
+}
+.name {
+  text-align: center;
+}
+
+/* Re-overiding the width 100% declaration to match size of % based container */
+.has-docked-nav .navbar > .container {
+  width: 85%; }
+
+/* Larger than phone */
+@media (min-width: 550px) {
+  /* Re-overiding the width 100% declaration to match size of % based container */
+  .has-docked-nav .navbar > .container {
+    width: 80%; }
+  .header {
+    margin-top: 6rem; }
+  .docs-section {
+    padding: 3rem 0; }
+  .header h1 {
+    font-size: 30px; 
+    text-align: left; }
+  .header h2 {
+    font-size: 20px;
+    text-align: left; }
+  .header img {
+    width: 100%;
+    height: auto }
+}
+
+/* Larger than tablet */
+@media (min-width: 835px) {
+  .logo-container {
+    height: 8rem;
+  }
+  .navbar-list {
+    display: block;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  .header h1 {
+    font-size: 40px; 
+    text-align: left; }
+  .header h2 {
+    font-size: 30px;
+    text-align: left; }
+}
+
+@media (min-width: 1100px) {
+  .header h1 {
+    font-size: 60px; }
+  .header h2 {
+    font-size: 38px;}
+}

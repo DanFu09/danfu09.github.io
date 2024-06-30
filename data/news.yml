@@ -1,0 +1,96 @@
+- date: 01/11/24
+  update: New long-context Monarch Mixer models, tuned for long-context retrieval. Up to 32k context length. Check out <a href="https://hazyresearch.stanford.edu/blog/2024-01-11-m2-bert-retrieval">blog</a> and <a href="https://github.com/HazyResearch/m2/blob/main/bert/EMBEDDINGS.md">code</a> for more!
+- date: 12/17/23
+  update: 'NeurIPS roundup: Monarch Mixer <a href="https://neurips.cc/virtual/2023/oral/73841">oral</a>, Laughing Hyena poster at the main conference. FlashFFTConv wins <strong>best poster</strong> at the third <a href="https://neurips2023-enlsp.github.io/index.html#schedule">workshop</a> on Efficient Natural Language and Speech Processing!'
+- date: 12/04/23
+  update: Super excited to talk about Monarch Mixer and FlashFFTConv on the Stanford MLSys Seminar! Check it out on <a href="https://www.youtube.com/watch?v=IS59IwGLvVs">YouTube</a>!
+- date: 11/13/23
+  update: Excited to release FlashFFTConv today! <a href="https://arxiv.org/abs/2311.05908">arXiv</a>, <a href="https://hazyresearch.stanford.edu/blog/2023-11-13-flashfftconv">blog</a>, <a href="https://github.com/HazyResearch/flash-fft-conv">code</a>!
+- date: 10/18/23
+  update: Monarch Mixer arXiv is <a href="https://arxiv.org/abs/2310.12109">up</a>!
+- date: 09/07/23
+  update: Episode on the Neural Notes <a href="https://www.youtube.com/watch?v=ULILmoHjWkU">podcast</a> about H3 and Monarch Mixer!
+- date: 07/29/23
+  update: Had a great time at ICML running the <a href="https://es-fomo.com/">ES-FoMo</a> workshop. Loved to see all the papers and attendees!
+- date: 07/25/23
+  update: <a href="https://hazyresearch.stanford.edu/blog/2023-07-25-m2-bert">Blog post</a> on a preview of Monarch Mixer - a first step to fully subquadratic models!
+- date: 07/24/23
+  update: In ICML this week, looking forward to presenting <a href="https://arxiv.org/abs/2302.06646">Long Convs</a> and <a href="https://arxiv.org/abs/2302.10866">Hyena</a>!
+- date: 06/08/23
+  update: New <a href="https://hazyresearch.stanford.edu/blog/2023-06-08-hyena-safari">blog post</a> on the safari of H-style (H3, Hyena) models!
+- date: 05/22/23
+  update: I talked about H3 on the TWIML AI podcast - the episode is <a href="https://twitter.com/twimlai/status/1660713415013179400">live</a> now!
+- date: 05/12/23
+  update: 'I was invited to sit on a panel with Pear VC firm - check out their summary of our conversation <a href="https://pear.vc/perspectives-in-generative-ai-with-stanford-researchers/">here</a>!'
+- date: 05/03/23
+  update: 'Presented <a href="https://arxiv.org/abs/2212.14052">H3</a> at ICLR in Rwanda (spotlight), and gave a <a href="https://www.youtube.com/watch?v=TkOSKrlpnU4">reading group</a> on H3 at MILA.'
+- date: 04/24/23
+  update: 'Three papers accepted to ICML - <a href="https://arxiv.org/abs/2302.10866">Hyena</a> (oral), <a href="https://arxiv.org/abs/2303.06865">FlexGen</a> (oral), and <a href="https://arxiv.org/abs/2302.06646">long convs</a>!'
+- date: 03/28/23
+  update: 'New <a href="https://hazyresearch.stanford.edu/blog/2023-03-27-long-learning">blog post</a> summarizing and organizing our work increasing the sequence length of foundation models!'
+- date: 03/07/2023
+  update: 'Hyena blog post <a href="https://hazyresearch.stanford.edu/blog/2023-03-07-hyena">out</a> now!'
+- date: 02/22/2023
+  update: 'A couple new papers out: <a href="https://arxiv.org/abs/2302.06646">long convolutions for sequence modeling</a> (plus <a href="https://hazyresearch.stanford.edu/blog/2023-02-15-long-convs">blog post</a>), and new <a href="https://arxiv.org/abs/2302.10866">Hyena model</a> replacing attention in language modeling entirely.'
+- date: 01/23/2023
+  update: <a href="https://arxiv.org/abs/2212.14052">H3</a> accepted to ICLR as a notable top-25% (spotlight)! <a href="https://github.com/HazyResearch/H3">Code</a> and <a href="https://hazyresearch.stanford.edu/blog/2023-01-20-h3">blog</a> <a href="https://www.together.xyz/blog/h3">posts</a> up now!
+- date: 10/13/2022
+  update: 'New <a href="https://hazyresearch.stanford.edu/blog/2022-10-12-flashattention-diffusion">blog post</a> on speeding up Stable Diffusion in Huggingface Diffusers using FlashAttention.'
+- date: 10/01/2022
+  update: '<a href="http://arxiv.org/abs/2205.14135">FlashAttention</a> accepted to NeurIPS - see everyone in New Orleans!'
+- date: 08/04/22
+  update: '<a href="https://arxiv.org/abs/2203.13270">Liger</a> won best student paper runner up at UAI 2022!'
+- date: 07/28/22
+  update: 'Won an award for  "Exemplary Impact and Relevance to DoD Research Objectives" at the NDSEG conference!'
+- date: 07/23/22
+  update: "FlashAttention won best paper at the Hardware Aware Efficient Training Workshop at ICML!"
+- date: 07/19/22
+  update: "Presenting Thanos at ICML, and FlashAttention at the Hardware Aware Efficient Training Workshop at ICML!"
+- date: 07/14/22
+  update: 'Gave a talk at <a href="https://mlopsworld.com/newyork/">MLOps World New York City Meetup</a> about FlashAttention!'
+- date: 06/21/22
+  update: "A couple new blog posts up: one on <a href='https://hazyresearch.stanford.edu/blog/2022-06-11-simplifying-s4'>explaining S4</a> from first principles, and another on why we're so excited about <a href='https://hazyresearch.stanford.edu/blog/2022-06-09-longer-sequences-next-leap-ai'>long sequences</a> for AI."
+- date: 05/30/22
+  update: 'Preprint of <a href="http://arxiv.org/abs/2205.14135">FlashAttention</a> now up on arXiv. A new IO-Aware algorithm for attention that enables faster Transformers that can model longer sequences.'
+- date: 05/16/22
+  update: 'Two papers accepted over the weekend! <a href="https://arxiv.org/abs/2204.07596">Perfectly Balanced: Improving Transfer and Robustness of Supervised Contrastive Learning</a> accepted to ICML 2022, and <a href="https://arxiv.org/abs/2203.13270">Shoring Up the Foundations: Fusing Model Embeddings and Weak Supervision</a> accepted to UAI 2022 as an oral!'
+- date: 04/19/22
+  update: 'New 3-part <a href="https://hazyresearch.stanford.edu/blog/2022-04-19-contrastive-1">blog series</a> on advances in contrastive learning, plus arXiv release of our paper <a href="https://arxiv.org/abs/2204.07596">Perfectly Balanced: Improving Transfer and Robustness of Supervised Contrastive Learning</a>!'
+- date: 03/28/22
+  update: 'Preprint of our paper Shoring Up the Foundations: Fusing Model Embeddings and Weak Supervision is available on <a href="https://arxiv.org/abs/2203.13270">arXiv</a>. We look at how to fuse foundation models and weak supervision in a principled way!'
+- date: 03/15/22
+  update: 'Our paper <a href="https://openreview.net/pdf?id=5EmB7MRFWG3">TABi: Type-Aware Bi-Encoders for Open-Domain Entity Retrieval</a> accepted to Findings of the ACL!'
+- date: 02/28/22
+  update: 'Our paper <a href="https://www.mdpi.com/2813-0324/3/1/4">The Details Matter: Preventing Class Collapse in Supervised Contrastive Learning</a> won best paper at the AIBSD workshop at AAAI 2022!'
+- date: 12/03/21
+  update: 'A <a href="https://drive.google.com/file/d/1LX7pEx2-VjiTGQdNsua3jBZRSG59GfuW/view">paper</a> on how to prevent class collapse with supervised contrastive learning accepted to AIBSD at AAAI 2022.'
+- date: 03/18/21
+  update: 'New <a href="https://realdanfu.medium.com/three-lessons-i-learned-about-applying-design-thinking-to-machine-learning-research-b087c27a8f68">blog post</a> about three lessons I''ve learned about applying the design process to my ML research.'
+- date: 08/17/20
+  update: 'Preprint of our work on analyzing a decade of US cable TV news is now available <a href="https://arxiv.org/abs/2008.06007">on arXiv</a>!'
+- date: 06/30/20
+  update: 'Epoxy, our new work on using weak supervision + pre-trained embeddings without fine-tuning is now available - <a href="https://arxiv.org/abs/2006.15168">paper</a>, <a href="https://github.com/HazyResearch/epoxy">code</a>, and a <a href="https://youtu.be/_d-mseTaYWY">short video</a> online!'
+- date: 06/29/20
+  update: 'A pre-recording of our FlyingSquid talk for ICML 2020 is available <a href="http://youtu.be/pHadwUKCoNE">on YouTube</a>!'
+- date: 06/01/20
+  update: 'FlyingSquid paper <a href="https://arxiv.org/abs/2002.11955">Fast and Three-rious: Speeding Up Weak Supervision with Triplet Methods</a> accepted to ICML 2020!'
+- date: 02/28/20
+  update: 'Excited to announce FlyingSquid! <a href="http://hazyresearch.stanford.edu/flyingsquid">Blog post</a>, <a href="https://arxiv.org/abs/2002.11955">paper</a>, and <a href="https://github.com/HazyResearch/flyingsquid">code</a> now available!'
+- date: 12/12/19
+  update: 'Presented <a href="https://arxiv.org/abs/1910.09505">Multi-Resolution weak Supervision for Sequential Data</a> at NeurIPS 2019 in Vancouver!'
+- date: 11/13/19
+  update: 'Gave a talk on Rekall at Intel''s Autonomous Driving Community of Practice Event!'
+- date: 10/27/19
+  update: 'Presented <a href="/projects/rekall-aisystems2019" target="_blank">Video Event Specification using Programmatic Composition</a> at AI Systems @ SOSP 2019 - poster and oral presentation!'
+- date: 10/21/19
+  update: 'Preprint of our paper on <a href="https://arxiv.org/abs/1910.09505">Multi-Resolution Weak Supervision for Sequential Data</a> now available on arXiv!'
+- date: 10/09/19
+  update: 'A new blog post about Rekall up on the DAWN blog - <a href="https://dawn.cs.stanford.edu/2019/10/09/rekall/" target="_blank">Why Train What You Can Code? Rekall: A Compositional Approach to Video Analysis</a>!'
+- date: 10/03/19
+  update: 'Our poster on <a href="/projects/rekall-aisystems2019" target="_blank">Video Event Specification using Programmatic Composition</a> accepted to AI Systems @ SOSP 2019!'
+- date: 09/03/19
+  update: 'Our paper on <a href="">Multi-Resolution Weak Supervision for Sequential Data</a> accepted to NeurIPS 2019!'
+- date: 05/15/19
+  update: 'I was awarded a Department of Defense <a href="https://ndseg.sysplus.com/NDSEG/Awardees/FY2019" target="_blank">NDSEG fellowship</a>!'
+- date: 05/03/19
+  update: '<a href="http://jhong.me/" target="_blank">James Hong</a> and I won a Magic Grant from the Brown Institute for Media Innovation for <a href="https://brown.columbia.edu/2019-20i20-magic-grants/" target="blank">Public Analysis of TV News</a>!'

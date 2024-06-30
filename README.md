@@ -1,0 +1,2 @@
+# DansCodeV2
+This is my personal website. It's hosted by GitHub Pages and is currently live at www.danfu.org. I built using the [Skeleton framework](getskeleton.com) and took most of its design inspiration from the Skeleton landing page. The site is called DansCodeV2 because I hosted my original website at www.danscode.com, but eventually decided to switch to a URL with my full name in it.  The first website is still live at danscode.herokuapp.com.

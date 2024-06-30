@@ -1,0 +1,6 @@
+[submodule "projects/rekall-aisystems2019"]
+	path = projects/rekall-aisystems2019
+	url = https://github.com/DanFu09/rekall-aisystems2019-web.git
+[submodule "projects/rekall-tech-report"]
+	path = projects/rekall-tech-report
+	url = https://github.com/DanFu09/rekall-vldb2020-web.git
