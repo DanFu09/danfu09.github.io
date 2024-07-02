@@ -1,5 +1,16 @@
 - year: 2024
   pubs:
+    - title: "Hydragen: High-Throughput LLM Inference with Shared Prefixes"
+      link: https://arxiv.org/abs/2402.05099
+      authors:
+        - name: Jordan Juravsky
+        - name: Bradley Brown
+        - name: Ryan Ehrlich
+        - name: Daniel Y. Fu
+          me: True
+        - name: Christopher Ré
+        - name: Azalia Mirhoseini
+      conf: "ES-FoMo-II Workshop at ICML 2024"
     - title: "Benchmarking and Building Long-Context Retrieval Models with LoCo and M2-BERT"
       link: https://arxiv.org/abs/2402.07440v2
       authors:
