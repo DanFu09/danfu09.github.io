@@ -1,5 +1,5 @@
 function showEmail() {
-  $("#email-link").html("danfu [at] stanford [dot] edu" );   
+  $("#email-link").html("danfu [at] cs [dot] stanford [dot] edu" );   
 }
 
 function toggleVis(id) {
