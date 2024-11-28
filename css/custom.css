@@ -1,5 +1,15 @@
 .container {
   max-width: 1000px; }
+.blog-container {
+  margin-top: 3rem;
+  max-width: 600px;
+}
+.blog-container li {
+  margin-bottom: 0;
+}
+.blog-container ul {
+  margin-top: -2.5rem;
+}
 .header {
   margin-top: 6rem;
   margin-bottom: 1rem;

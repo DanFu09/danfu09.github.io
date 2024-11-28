@@ -1,3 +1,9 @@
+- title: "The Coffee Experiment"
+  link: notes/coffee.html
+  date: November 27, 2024
+  authors: A long line of graduate students
+  blurb: "A simple protocol for designing experiments, passed down through generations of grad students."
+
 - title: "Long-Context Retrieval Models with Monarch Mixer"
   link: https://hazyresearch.stanford.edu/blog/2024-01-11-m2-bert-retrieval
   date: Jan 11, 2024
