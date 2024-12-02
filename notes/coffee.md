@@ -139,4 +139,4 @@ The key ideas are:
 
 Happy experimenting!
 
-*Last updated 11/27/2024.*
+*Last updated 12/02/2024.*
