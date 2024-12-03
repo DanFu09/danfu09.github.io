@@ -1,5 +1,49 @@
 - year: 2024
   pubs:
+    - title: "RedPajama: an Open Dataset for Training Large Language Models"
+      link: https://arxiv.org/abs/2411.12372
+      authors:
+        - name: Maurice Weber
+        - name: Daniel Y. Fu
+          me: True
+        - name: Quentin Anthony
+        - name: Yonatan Oren
+        - name: Shane Adams
+        - name: Anton Alexandrov
+        - name: Xiaozhong Lyu
+        - name: Huu Nguyen
+        - name: Xiaozhe Yao
+        - name: Virginia Adams
+        - name: Ben Athiwaratkun
+        - name: Rahul Chalamala
+        - name: Kezhen Chen
+        - name: Max Ryabinin
+        - name: Tri Dao
+        - name: Percy Liang
+        - name: Christopher Ré
+        - name: Irina Rish
+        - name: Ce Zhang
+      conf: "NeurIPS Datasets and Benchmarks 2024, <strong>Spotlight</strong>"
+      links:
+        - text: code
+          link: https://github.com/togethercomputer/RedPajama-Data
+        - text: huggingface
+          link: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-V2
+    - title: "ThunderKittens: Simple, Fast, and Adorable AI Kernels"
+      link: https://arxiv.org/abs/2410.20399
+      authors:
+        - name: Benjamin F. Spector
+        - name: Simran Arora
+        - name: Aaryan Singhal
+        - name: Daniel Y. Fu
+          me: True
+        - name: Christopher Ré
+      conf: "arXiv, Oct 2024"
+      links:
+        - text: code
+          link: https://github.com/HazyResearch/ThunderKittens
+        - text: blog post
+          link: https://hazyresearch.stanford.edu/blog/2024-10-29-tk2
     - title: "Hydragen: High-Throughput LLM Inference with Shared Prefixes"
       link: https://arxiv.org/abs/2402.05099
       authors:
