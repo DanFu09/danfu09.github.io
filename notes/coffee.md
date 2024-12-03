@@ -102,7 +102,7 @@ The important bit is to be aware of the limitations of your proxies and to choos
 
 The same idea applies to protocols.
 You'll notice that the coffee experiment does not measure variation in caffeine intake throughout the PhD, and it has some pretty glaring flaws like not accounting for students who drop out (or die of caffeine toxicity).
-**Experiment protocals are always imperfect** - what's important is being aware of the imperfections to account for them.
+**Experiment protocols are always imperfect** - what's important is being aware of the imperfections to account for them.
 
 In a real research paper, you may choose to strengthen the power of your argument by running a separate experiment that uses different proxies and protocols with other tradeoffs.
 
