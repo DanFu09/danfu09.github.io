@@ -36,7 +36,16 @@ function init_shared(callback) {
 }
 
 function init_blog_post() {
-  init_navbar(() => {});
+  init_navbar(() => {
+    $nav = $('.navbar');
+    $navbarToggle = $('.navbar-toggle');
+    $window = $(window);
+    $body = $('body');
+    navOffsetTop = $nav.offset().top;
+
+    $window.on('scroll', onScroll);
+    $navbarToggle.on('click', onNavbarToggle);
+  });
 }
 
 function init_index() {
