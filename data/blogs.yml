@@ -4,6 +4,12 @@
   authors: A long line of graduate students
   blurb: "A simple protocol for designing experiments, passed down through generations of grad students."
 
+- title: "ThunderKittens 2: Easier, Better, Faster, Cuter"
+  link: https://hazyresearch.stanford.edu/blog/2024-10-29-tk2
+  date: October 29, 2024
+  authors: Benjamin Spector, Simran Arora, Aaryan Singhal, Dan Fu, Chris Ré
+  blurb: "ThunderKittens is a framework for writing flexible, efficient CUDA kernels for machine learning."
+
 - title: "Long-Context Retrieval Models with Monarch Mixer"
   link: https://hazyresearch.stanford.edu/blog/2024-01-11-m2-bert-retrieval
   date: Jan 11, 2024
