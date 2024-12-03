@@ -4,11 +4,17 @@ var $window;
 var $body;
 var navOffsetTop;
 
-function init_shared(callback) {
+function init_navbar(callback) {
   fetch('/layouts/navbar.html')
     .then(response => response.text())
     .then(navHTML => {
       $('#navbar-container').html(navHTML);
+      callback();
+    });
+}
+
+function init_shared(callback) {
+  init_navbar(() => {
 
       fetch('/layouts/footer.html')
         .then(response => response.text())
@@ -27,6 +33,10 @@ function init_shared(callback) {
 
       callback();
     });
+}
+
+function init_blog_post() {
+  init_navbar(() => {});
 }
 
 function init_index() {

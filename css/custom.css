@@ -7,6 +7,9 @@
 .blog-container li {
   margin-bottom: 0;
 }
+ul.negative-margin {
+  margin-top: -1.5rem;
+}
 .blog-container ul {
   margin-top: -2.5rem;
 }
