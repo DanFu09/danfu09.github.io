@@ -1,5 +1,5 @@
 - date: 12/01/24
-  update: "<ul style='margin: 0'><li> I'll be starting at UCSD as an assistant professor in January 2026!</li> <li> <a href='https://huggingface.co/datasets/togethercomputer/RedPajama-Data-V2'>TK paper</a> out on arXiv!</li> <li> <a href='https://arxiv.org/abs/2411.12372'>RedPajama paper</a> out on arXiv!</li>"
+  update: "<ul style='margin: 0'><li> I'll be starting at UCSD as an assistant professor in January 2026!</li> <li> <a href='https://arxiv.org/abs/2410.20399'>TK paper</a> out on arXiv!</li> <li> <a href='https://arxiv.org/abs/2411.12372'>RedPajama paper</a> out on arXiv!</li>"
 - date: 01/11/24
   update: New long-context Monarch Mixer models, tuned for long-context retrieval. Up to 32k context length. Check out <a href="https://hazyresearch.stanford.edu/blog/2024-01-11-m2-bert-retrieval">blog</a> and <a href="https://github.com/HazyResearch/m2/blob/main/bert/EMBEDDINGS.md">code</a> for more!
 - date: 12/17/23
