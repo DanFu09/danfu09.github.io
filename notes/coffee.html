@@ -57,7 +57,7 @@
 
     <script>
         // Fetch and render the Markdown content
-        fetch('24-12-02-coffee.md')
+        fetch('24-12-02-coffee/24-12-02-coffee.md')
             .then(response => response.text())
             .then(markdown => {
                 document.getElementById('content').innerHTML = marked.parse(markdown);
