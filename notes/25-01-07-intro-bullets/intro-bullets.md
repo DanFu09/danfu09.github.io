@@ -91,3 +91,7 @@ _**Common pitfall:** Not explaining your method in enough detail, or not includi
 I use these five bullets frequently during my research process, starting weeks or months before it’s time to write the paper. For me, the bullets help clarify my thought and the major technical insights. If I'm missing an answer to one of the questions - I know my work is incomplete, and I have a guide to doing better.
 
 I hope this helps!
+
+## **acknowledgments**
+Thanks to Simran Arora for reading an early draft of this post and leaving feedback.
+And thanks to all the students in my lab before me for passing this down and teaching me!
