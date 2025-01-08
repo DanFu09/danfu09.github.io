@@ -12,6 +12,10 @@ ul.negative-margin {
 }
 .blog-container ul {
   margin-top: -2.5rem;
+  margin-left: 0.5rem;
+}
+.blog-container ul ul {
+  margin-top: 0rem;
 }
 .header {
   margin-top: 6rem;

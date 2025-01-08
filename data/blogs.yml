@@ -1,6 +1,12 @@
+- title: "How I structure Introductions to Research Papers"
+  link: notes/25-01-07-intro-bullets
+  date: Jan 07, 2025
+  authors: Dan Fu
+  blurb: "This is a part of a series I’m writing to distill what I learned about writing research papers during my PhD into a series of blog posts. Previously, I put up the coffee experiment protocol. In this post, I’ll talk about how I like to use Jennifer Widom’s five-bullet structure for drafting introductions."
+
 - title: "The Coffee Experiment"
   link: notes/coffee.html
-  date: November 27, 2024
+  date: Nov 27, 2024
   authors: A long line of graduate students
   blurb: "A simple protocol for designing experiments, passed down through generations of grad students."
 

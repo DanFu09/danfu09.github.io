@@ -26,38 +26,40 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="../dist/css/normalize.css">
-  <link rel="stylesheet" href="../dist/css/skeleton.css">
-  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="../../dist/css/normalize.css">
+  <link rel="stylesheet" href="../../dist/css/skeleton.css">
+  <link rel="stylesheet" href="../../css/custom.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="../images/favicon.ico">
+  <link rel="icon" type="image/png" href="../../images/favicon.ico">
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="../dist/js/jquery.min.js"></script>
-  <script src="../dist/js/js-yaml.min.js"></script>
-  <script src="../js/functions.js"></script>
-  <script src="../js/site.js"></script>
-  <script src="../dist/js/marked.min.js"></script>
+  <script src="../../dist/js/jquery.min.js"></script>
+  <script src="../../dist/js/js-yaml.min.js"></script>
+  <script src="../../js/functions.js"></script>
+  <script src="../../js/site.js"></script>
+  <script src="../../dist/js/marked.min.js"></script>
 </head>
-<body>
+<body onload=init_shared()>
 
     <!-- Navbar -->
-    <!-- <div id="navbar-container"></div> -->
+    <div id="navbar-container"></div>
 
-    <div class="container blog-container">
+    <div class="container blog-container" style="max-width: 800px;">
         <div class="row"><h1 class="name top-margin bottom-margin"> </h1></div>
         <div class="row">
             <div id="content" class="content"></div>
         </div>
+
+        <footer id="footer"></footer>
     </div>
 
     <script>
         // Fetch and render the Markdown content
-        fetch('24-12-02-coffee.md')
+        fetch('intro-bullets.md')
             .then(response => response.text())
             .then(markdown => {
                 document.getElementById('content').innerHTML = marked.parse(markdown);
